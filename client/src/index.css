@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+/* Custom Animations */
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(20px, -30px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  75% {
+    transform: translate(30px, 10px) scale(1.05);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes walk-right {
+  0% {
+    left: -150px;
+    transform: scaleX(1);
+  }
+  45% {
+    left: calc(100% + 150px);
+    transform: scaleX(1);
+  }
+  50% {
+    left: calc(100% + 150px);
+    transform: scaleX(-1);
+  }
+  95% {
+    left: -150px;
+    transform: scaleX(-1);
+  }
+  100% {
+    left: -150px;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes walk-left {
+  0% {
+    right: -150px;
+    transform: scaleX(-1);
+  }
+  45% {
+    right: calc(100% + 150px);
+    transform: scaleX(-1);
+  }
+  50% {
+    right: calc(100% + 150px);
+    transform: scaleX(1);
+  }
+  95% {
+    right: -150px;
+    transform: scaleX(1);
+  }
+  100% {
+    right: -150px;
+    transform: scaleX(-1);
+  }
+}
+
+@keyframes road-lines {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200px);
+  }
+}
+
+@keyframes marquee-slow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Animation Classes */
+.animate-blob {
+  animation: blob 8s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-walk-right {
+  animation: walk-right 20s linear infinite;
+}
+
+.animate-walk-left {
+  animation: walk-left 25s linear infinite;
+}
+
+.animate-road-lines {
+  animation: road-lines 1s linear infinite;
+}
+
+.animate-marquee-slow {
+  animation: marquee-slow 10s linear infinite;
+}
+
+/* Animation Delays */
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+.delay-1000 {
+  animation-delay: 1000ms;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e3a5f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #fbbf24, #f59e0b);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #f59e0b, #d97706);
+}
